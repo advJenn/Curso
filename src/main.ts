@@ -4,7 +4,8 @@ import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
 /*import { bulbasaur, pokemons} from './bases/02-objects.ts'*/
 //import { charmander } from './bases/03 -clases.ts'
-import { charmander } from './bases/04-injection';
+//import { charmander } from './bases/04-injection';
+import { charmander } from './bases/05-decorators.ts';
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">

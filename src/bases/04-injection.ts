@@ -13,7 +13,7 @@ export class Pokemon {
         public readonly id: number, 
         public name: string,
         // Todo: inyectar dependencias
-        private readonly http: HttpAdapter,
+        private readonly http: HttpAdapter, // ==> Inyecto mi dependencia.
 
 
     ) {}
@@ -36,9 +36,9 @@ export class Pokemon {
 
 }
 
-const pokeApiAxios = new PokeApiAdapter();
-const pokeApiFetch= new PokeApiFetchAdapter();
+const pokeApiAxios = new PokeApiAdapter();        // ==> Para hacer uso de mi dependencia.
+const pokeApiFetch= new PokeApiFetchAdapter();    // ==> lo mismo...
 
-export const charmander = new Pokemon( 4, 'Charmander', pokeApiAxios );
+export const charmander = new Pokemon( 4, 'Charmander', pokeApiFetch );  
 
 charmander.getMoves();
